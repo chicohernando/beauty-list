@@ -1,0 +1,8 @@
+services:
+  api:
+    build:
+      context: ./api/
+    ports:
+      - ${HOST_NON_SECURE_API_PORT}:80
+    volumes:
+      - ${API_REPOSITORY_PATH}:/srv/beauty-list/api:cached
